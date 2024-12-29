@@ -1,5 +1,8 @@
 package self.jjjyjj.oop.example.pos;
 
 public class Money {
-    // TODO
+    public void print(Printer p) {
+        // TODO
+
+    }
 }

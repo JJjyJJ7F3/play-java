@@ -13,7 +13,14 @@ public class Item {
         this.price = price;
     }
 
+    /**
+     * FIXME too much responsibilities for Item and Money to achieve printing
+     */
     public void print(Printer p) {
-        p.print();
+        p.print(description);
+        p.print(" ");
+        price.print(p);
+
+        p.newline();
     }
 }

@@ -5,7 +5,11 @@ package self.jjjyjj.oop.example.pos;
  */
 public class Printer {
 
-    public void print() {
+    public void print(String text) {
+        // TODO
+    }
+
+    public void newline() {
         // TODO
     }
 }
