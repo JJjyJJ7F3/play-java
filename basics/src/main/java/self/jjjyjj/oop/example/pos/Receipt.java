@@ -1,5 +1,6 @@
 package self.jjjyjj.oop.example.pos;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
 public class Receipt {
     private final Printer printer;
     private final List<Item> items = new ArrayList<>();
+    private BigDecimal totalPrice = BigDecimal.ZERO;
 
     public Receipt(Printer printer) {
         this.printer = printer;
@@ -23,6 +25,7 @@ public class Receipt {
      */
     public void add(String description, Money price) {
         items.add(new Item(description, price));
+        totalPrice = totalPrice.add(price.getAmount());
     }
 
     /**
@@ -30,5 +33,9 @@ public class Receipt {
      */
     public void print() {
         items.forEach(item -> item.print(printer));
+
+        printer.print("Total: ");
+        printer.print(totalPrice.toString());
+        printer.newline();
     }
 }
