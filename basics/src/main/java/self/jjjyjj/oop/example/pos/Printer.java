@@ -6,10 +6,10 @@ package self.jjjyjj.oop.example.pos;
 public class Printer {
 
     public void print(String text) {
-        // TODO
+        System.out.print(text);
     }
 
     public void newline() {
-        // TODO
+        System.out.println();
     }
 }

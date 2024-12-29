@@ -14,13 +14,9 @@ public class Item {
     }
 
     /**
-     * FIXME too much responsibilities for Item and Money to achieve printing
+     * delegate print to ItemFormat
      */
     public void print(Printer p) {
-        p.print(description);
-        p.print(" ");
-        price.print(p);
-
-        p.newline();
+        new ItemFormat(description, price).print(p);
     }
 }
