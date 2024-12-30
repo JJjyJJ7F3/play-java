@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class BillCalculatorTest {
 
     @Test
-    public void totalStartsAtZero() {
+    public void totalAmountIsZero() {
         // Arrange
         var bill = new Bill();
 
