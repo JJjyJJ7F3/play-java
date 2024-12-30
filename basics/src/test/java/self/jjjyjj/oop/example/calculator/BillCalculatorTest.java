@@ -9,10 +9,10 @@ public class BillCalculatorTest {
     @Test
     public void totalStartsAtZero() {
         // Arrange
-        var calculator = new BillCalculator();
+        var bill = new Bill();
 
         // Act
-        double total = calculator.getTotal();
+        double total = bill.getTotal();
 
         // Assert
         assertThat(total).isZero();
@@ -21,13 +21,27 @@ public class BillCalculatorTest {
     @Test
     public void correctTotalForOneItem() {
         // Arrange
-        var calculator = new BillCalculator();
+        var bill = new Bill();
 
         // Act
-        calculator.add(12.75);
-        double total = calculator.getTotal();
+        bill.add(12.75);
+        double total = bill.getTotal();
 
         // Assert
         assertThat(total).isEqualTo(12.75);
+    }
+
+    @Test
+    public void correctTotalForTwoItems() {
+        // Arrange
+        var bill = new Bill();
+
+        // Act
+        bill.add(12.75);
+        bill.add(25.5);
+        double total = bill.getTotal();
+
+        // Assert
+        assertThat(total).isEqualTo(38.25);
     }
 }
