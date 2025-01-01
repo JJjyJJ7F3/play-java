@@ -3,22 +3,12 @@ package self.jjjyjj.oop.example.solid.isp;
 public class SmartTVControl implements Control {
     @Override
     public void on() {
-
+        System.out.println("TV is on");
     }
 
     @Override
     public void off() {
-
-    }
-
-    @Override
-    public void channelUp() {
-
-    }
-
-    @Override
-    public void channelDown() {
-
+        System.out.println("TV is off");
     }
 
     @Override
@@ -26,18 +16,4 @@ public class SmartTVControl implements Control {
         System.out.println("operation supported");
     }
 
-    @Override
-    public void stopRecording() {
-        System.out.println("operation supported");
-    }
-
-    @Override
-    public void launchYouTube() {
-        System.out.println("operation supported");
-    }
-
-    @Override
-    public void launchNetflix() {
-        System.out.println("operation supported");
-    }
 }
