@@ -1,5 +1,6 @@
 package self.jjjyjj.oop.example.solid.dip;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -17,9 +18,16 @@ class TextConversionTest {
     @Mock
     private Output output;
 
+    private AutoCloseable mocks;
+
     @BeforeEach
     public void beforeEachTest() {
         MockitoAnnotations.openMocks(this);
+    }
+
+    @AfterEach
+    public void afterEachTest() throws Exception {
+        mocks.close();
     }
 
     @Test
