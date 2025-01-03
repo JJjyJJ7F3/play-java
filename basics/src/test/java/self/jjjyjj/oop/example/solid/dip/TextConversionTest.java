@@ -22,7 +22,7 @@ class TextConversionTest {
 
     @BeforeEach
     public void beforeEachTest() {
-        MockitoAnnotations.openMocks(this);
+        mocks = MockitoAnnotations.openMocks(this);
     }
 
     @AfterEach
