@@ -6,5 +6,12 @@ public class NutritionFactsDemo {
                 10, 10, 12);
 
 
+        NutritionFactsBuilder nutritionFactsBuilder = new NutritionFactsBuilder
+                .Builder(1, 2)
+                .calories(3)
+                .fat(4)
+                .sodium(5)
+                .carbohydrate(6)
+                .build();
     }
 }

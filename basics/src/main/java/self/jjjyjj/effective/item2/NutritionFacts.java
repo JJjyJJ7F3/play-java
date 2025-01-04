@@ -1,5 +1,8 @@
 package self.jjjyjj.effective.item2;
 
+import lombok.Getter;
+
+@Getter
 public class NutritionFacts {
     private final int servingSize; // (mL) required
     private final int servings; // (per container) required
