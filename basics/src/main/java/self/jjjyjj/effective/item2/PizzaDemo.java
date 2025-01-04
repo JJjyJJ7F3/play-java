@@ -10,11 +10,15 @@ public class PizzaDemo {
                 .addTopping(ONION)
                 .build();
 
+        System.out.println(nyPizza.toString());
+
 
         Calzone calzone = new Calzone.Builder()
                 .sauceInside()
                 .addTopping(SAUSAGE)
                 .addTopping(ONION)
                 .build();
+
+        System.out.println(calzone.isSauceInside());
     }
 }
