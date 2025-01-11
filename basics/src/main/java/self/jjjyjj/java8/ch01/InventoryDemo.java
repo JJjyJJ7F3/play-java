@@ -14,8 +14,19 @@ public class InventoryDemo {
         List<Apple> greenApples = FruitInventory.filterGreenApples(apples);
         List<Apple> heavyApples = FruitInventory.filterHeavyApples(apples);
 
+        List<Apple> greenAppleAgain = FruitInventory.filterApples(apples, Apple::isGreenApple);
+        List<Apple> greenHeavyApples = FruitInventory.filterApples(apples,
+                (Apple a) -> a.getColor().equals("green") && a.getWeight() > 10);
+
+        List<Apple> greenApplesByStream = apples.stream().filter(Apple::isGreenApple).toList();
+        List<Apple> greenApplesByParallelStream = apples.parallelStream().filter(Apple::isGreenApple).toList();
+
         System.out.println(greenApples);
         System.out.println(heavyApples);
+        System.out.println(greenAppleAgain);
+        System.out.println(greenHeavyApples);
+        System.out.println(greenApplesByStream);
+        System.out.println(greenApplesByParallelStream);
 
     }
 }

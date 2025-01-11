@@ -14,5 +14,11 @@ public class Apple {
         this.weight = weight;
     }
 
+    public boolean isGreenApple() {
+        return "green".equals(color);
+    }
 
+    public boolean isHeavyApple() {
+        return weight > 10;
+    }
 }
